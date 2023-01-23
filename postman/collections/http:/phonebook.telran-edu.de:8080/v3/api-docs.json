@@ -1,0 +1,6385 @@
+{
+	"info": {
+		"_postman_id": "96ac0833-5a9e-4d3b-80c2-27821b17e4ce",
+		"name": "http://phonebook.telran-edu.de:8080/v3/api-docs",
+		"description": "This is project of students Tel-Ran.de college\n\nContact Support:\n Name: Tel-Ran.de\n Email: go@tel-ran.de",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "13781175-96ac0833-5a9e-4d3b-80c2-27821b17e4ce"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "password",
+							"item": [
+								{
+									"name": "Update password",
+									"id": "0ef7a84c-e0c8-414e-8338-df6334b85e3a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"valid_password\",\n  \"token\": \"ipsum irure culpa et qui\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"password"
+											]
+										},
+										"description": "Updating the password. The recovery token is contained within the request body"
+									},
+									"response": [
+										{
+											"id": "54661e52-be19-420d-8570-21208dcdbd21",
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"password\": \"valid_password\",\n  \"token\": \"ipsum irure culpa et qui\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/user/password",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														"password"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "15a9db14-712f-49d8-b326-5f1a20f21551",
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"password\": \"valid_password\",\n  \"token\": \"ipsum irure culpa et qui\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/user/password",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														"password"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "69cb7cf9-8780-4d52-9741-7498e7a54303",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"password\": \"valid_password\",\n  \"token\": \"ipsum irure culpa et qui\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/user/password",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														"password"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Password recovery request",
+									"id": "64b42262-158b-42b9-a3bc-87f95a304ce2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"valid.email@email.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/password/recovery",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"password",
+												"recovery"
+											]
+										},
+										"description": "Unauthorized user request for updating the password"
+									},
+									"response": [
+										{
+											"id": "3a57c31f-d2cb-4203-a955-8f7c40060161",
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"valid.email@email.com\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/user/password/recovery",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														"password",
+														"recovery"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "a923e910-580a-43c7-8e17-ef2cc12d8554",
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"valid.email@email.com\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/user/password/recovery",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														"password",
+														"recovery"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "6dbb1b1c-3167-4029-8999-1f3a8980aadf",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"valid.email@email.com\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/user/password/recovery",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														"password",
+														"recovery"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"id": "eebe678f-6e37-401c-bfbe-f1f43b8d8cb8"
+						},
+						{
+							"name": "Get the data of the authenticated user",
+							"id": "ea84347f-f21d-43eb-a9f0-f38f52c6be2a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user"
+									]
+								},
+								"description": "Returns the data of the logged in user.\n\nUser data(needs user email) for updating is contained in the JWT"
+							},
+							"response": [
+								{
+									"id": "331edc19-362e-4dfa-939b-68a0cccf9321",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"email\": \"valid.email@email.com\",\n  \"password\": \"valid_password\",\n  \"roles\": [\n    \"ROLE_USER\",\n    \"ROLE_USER\"\n  ]\n}"
+								},
+								{
+									"id": "e4b1f3be-5b0c-492b-b1c0-bcc7a958643a",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "610ffdb6-1b60-4063-ba8a-374f0ec990c8",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "New user registration",
+							"id": "5b50556c-f975-4c25-b448-25a3d64f3516",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"valid.email@email.com\",\n  \"password\": \"valid_password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user"
+									]
+								},
+								"description": "An email will be sent with a link to activation to the address specified during registration. The link will contain an activation token\n\nEmail validation pattern: ^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,10}$"
+							},
+							"response": [
+								{
+									"id": "60f15f13-6046-44e9-9f75-48689e3be02f",
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"valid.email@email.com\",\n  \"password\": \"valid_password\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "eu in eiusmod sit"
+								},
+								{
+									"id": "51fc0646-43b6-47f7-90e4-0e9dd84588dd",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"valid.email@email.com\",\n  \"password\": \"valid_password\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "a473e229-401f-435f-ba5e-e96e00db7620",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"valid.email@email.com\",\n  \"password\": \"valid_password\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Updating the password of registered user",
+							"id": "0ea3f0a8-be5b-4a88-bfd5-15aba98379ba",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"valid_password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/auth-password",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"auth-password"
+									]
+								},
+								"description": "Updating the password of registered user. \n\nUser data(needs user email) for updating is contained in the JWT"
+							},
+							"response": [
+								{
+									"id": "240a86e3-39b5-4d0a-a522-b4e5d08c1670",
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"valid_password\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/auth-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"auth-password"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "a62a9e66-5cf1-46da-b24d-2624beb07965",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"valid_password\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/auth-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"auth-password"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "b3644590-1a2a-444e-ad37-355ddb18ec2e",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"valid_password\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/auth-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"auth-password"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get JWT of test user",
+							"id": "12f7e36c-1d03-4332-80d6-bca7bf11effc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/user/token",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"token"
+									]
+								},
+								"description": "This token will expire on 07 October 2036\n\nTest user email: test@gmail.com"
+							},
+							"response": [
+								{
+									"id": "aa4f0e4f-9233-4fb8-8952-a3040dbf4e58",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/token",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"token"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "eu in eiusmod sit"
+								},
+								{
+									"id": "b041384d-fb8b-4396-8dd7-fc43082bf6d7",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/token",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"token"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "18e9f3fc-cffc-4bd0-bd1f-e3aab972b879",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/token",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"token"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Activate registered user",
+							"id": "58384576-7c50-4ba1-8e7e-560edf2dcb51",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/user/activation/:token",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"activation",
+										":token"
+									],
+									"variable": [
+										{
+											"key": "token",
+											"value": "eu in eiusmod sit",
+											"description": "(Required) password recovery token"
+										}
+									]
+								},
+								"description": "As a parameter, you need to specify the token that was sent to the email of the registered user"
+							},
+							"response": [
+								{
+									"id": "c4bd024b-9b6b-474f-a2ac-f2e3f83583ff",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/activation/:token",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"activation",
+												":token"
+											],
+											"variable": [
+												{
+													"key": "token",
+													"value": "eu in eiusmod sit",
+													"description": "(Required) password recovery token"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "a2432aa8-5ff9-43b6-a0c1-288e5cf91588",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/activation/:token",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"activation",
+												":token"
+											],
+											"variable": [
+												{
+													"key": "token",
+													"value": "eu in eiusmod sit",
+													"description": "(Required) password recovery token"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "ab192902-2696-4398-bf06-c36321c00175",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/activation/:token",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"activation",
+												":token"
+											],
+											"variable": [
+												{
+													"key": "token",
+													"value": "eu in eiusmod sit",
+													"description": "(Required) password recovery token"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "2db35c74-947a-43fd-9513-9aa606dbff44"
+				},
+				{
+					"name": "phone",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get phone by phone id",
+									"id": "daf9da76-fb25-4b28-9732-e3a70c1b1a5c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Access-Token",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/phone/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) phone id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "dd5fe84d-ea7b-4541-baca-a9fa055ca3ad",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/phone/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"phone",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) phone id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"countryCode\": \"+49\",\n  \"phoneNumber\": \"017677788890\",\n  \"id\": 1,\n  \"contactId\": 1\n}"
+										},
+										{
+											"id": "e3e2b204-09b0-4c54-a50a-5dbbe186f9e5",
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/phone/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"phone",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) phone id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "f70f847a-fa7a-40a1-ab0d-25d95a07669f",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/phone/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"phone",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) phone id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Delete phone by phone id",
+									"id": "02191d05-7bd4-4083-9cf0-d039735b379e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Access-Token",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/phone/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) phone id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "c3edc0e4-8cbe-46e7-8213-ff3a2ea57ca3",
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/phone/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"phone",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) phone id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "ac8f97f9-cc44-4cf7-ac85-468eded1f1de",
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/phone/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"phone",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) phone id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "01376ffb-1ceb-4cb2-84ee-73c0ddac1d57",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/phone/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"phone",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) phone id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"id": "53cc54f0-83ab-48f9-a4c9-0ea4454d4ee0"
+						},
+						{
+							"name": "Update phone",
+							"id": "de0e07cc-b108-41ab-a0b0-742a6c257f04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"countryCode\": \"+49\",\n  \"phoneNumber\": \"017677788890\",\n  \"id\": 1,\n  \"contactId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/phone",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"phone"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "863074ef-aebf-41ae-95f9-e685f560435c",
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"+49\",\n  \"phoneNumber\": \"017677788890\",\n  \"id\": 1,\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/phone",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "71ffef56-b57d-466e-af1b-9a08a68c92fd",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"+49\",\n  \"phoneNumber\": \"017677788890\",\n  \"id\": 1,\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/phone",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "93eb79fe-8e08-45cc-8714-1683bd11548c",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"+49\",\n  \"phoneNumber\": \"017677788890\",\n  \"id\": 1,\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/phone",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Add new phone",
+							"id": "04eaa909-361b-4f32-a2f6-7623fc4ba860",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"countryCode\": \"+49\",\n  \"phoneNumber\": \"017677788890\",\n  \"contactId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/phone",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"phone"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "b1bc2765-dd11-4a7a-9370-dd235f1643d8",
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"+49\",\n  \"phoneNumber\": \"017677788890\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/phone",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "25ad7f5a-c7a6-48f8-88d5-1547d5f156b6",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"+49\",\n  \"phoneNumber\": \"017677788890\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/phone",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "257a8d93-f35d-4dae-9589-a1373169d00d",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"+49\",\n  \"phoneNumber\": \"017677788890\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/phone",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get list of phones by contact id",
+							"id": "d69a6772-0ed4-4a75-b698-ce9812daed71",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/phone/:contactId/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"phone",
+										":contactId",
+										"all"
+									],
+									"variable": [
+										{
+											"key": "contactId",
+											"value": "1",
+											"description": "(Required) contact id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "921d0687-5903-4b8f-8641-f8ef0ebb451d",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/phone/:contactId/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone",
+												":contactId",
+												"all"
+											],
+											"variable": [
+												{
+													"key": "contactId",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"countryCode\": \"+49\",\n    \"phoneNumber\": \"017677788890\",\n    \"id\": 1,\n    \"contactId\": 1\n  },\n  {\n    \"countryCode\": \"+49\",\n    \"phoneNumber\": \"017677788890\",\n    \"id\": 1,\n    \"contactId\": 1\n  }\n]"
+								},
+								{
+									"id": "3b2c6b77-244f-4d52-9266-db63a93f5f6b",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/phone/:contactId/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone",
+												":contactId",
+												"all"
+											],
+											"variable": [
+												{
+													"key": "contactId",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "3b9858c0-eeaa-461d-a746-f474037d6d81",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/phone/:contactId/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"phone",
+												":contactId",
+												"all"
+											],
+											"variable": [
+												{
+													"key": "contactId",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "8430289f-1e8a-4dd7-9860-f9f84a45d04e"
+				},
+				{
+					"name": "my-contacts",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get contact by contact id",
+									"id": "d23704be-3486-4102-a95e-f41e405af55a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Access-Token",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "a79ccfd7-c64f-4df1-bb51-35321b08eaec",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													},
+													{
+														"key": "Access-Token",
+														"value": "eu in eiusmod sit"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/my-contacts/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"my-contacts",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) contact id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": -65598004,\n  \"firstName\": \"fugiat ut anim\",\n  \"lastName\": \"dolore ut\",\n  \"description\": \"veniam cupidatat cillum eu ut\",\n  \"address\": \"irure occaecat\",\n  \"phone\": \"minim voluptate adipisicing exercitation\",\n  \"email\": \"ex in Ut \"\n}"
+										},
+										{
+											"id": "9d1bc114-0bb8-49ee-bb5a-3c5ec00dfe75",
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													},
+													{
+														"key": "Access-Token",
+														"value": "eu in eiusmod sit"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/my-contacts/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"my-contacts",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) contact id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "40c3f2e6-18dc-4082-9ab9-061842a55f85",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													},
+													{
+														"key": "Access-Token",
+														"value": "eu in eiusmod sit"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/my-contacts/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"my-contacts",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) contact id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Delete contact by contact id",
+									"id": "0d5f10e7-2784-406d-9bf1-7080e924b533",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Access-Token",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "2ea67411-2e2e-454f-a4d2-57903bc5ff94",
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													},
+													{
+														"key": "Access-Token",
+														"value": "eu in eiusmod sit"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/my-contacts/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"my-contacts",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) contact id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "82568d48-85b3-472e-b14a-3c80442ea35c",
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													},
+													{
+														"key": "Access-Token",
+														"value": "eu in eiusmod sit"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/my-contacts/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"my-contacts",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) contact id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "19cef717-018a-4034-9d33-148c3dd4391f",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													},
+													{
+														"key": "Access-Token",
+														"value": "eu in eiusmod sit"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/my-contacts/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"my-contacts",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) contact id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"id": "9a2e7121-cd4d-40e3-bd46-410357483f40"
+						},
+						{
+							"name": "Get list of contacts by authenticated user",
+							"id": "bcd711b4-bdb1-4b7c-9e8d-7646aa296880",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Access-Token",
+										"value": "eu in eiusmod sit"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/my-contacts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"my-contacts"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "28203251-025f-4458-a298-c486ff04be38",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": -98132198,\n    \"firstName\": \"Duis velit laborum tempor\",\n    \"lastName\": \"minim laborum ullamco in\",\n    \"description\": \"nostrud cupidatat\",\n    \"address\": \"in mollit\",\n    \"phone\": \"dolore Ut ex dolore\",\n    \"email\": \"Ut fugiat aute amet\"\n  },\n  {\n    \"id\": -32732658,\n    \"firstName\": \"ullamco ipsum qui non sunt\",\n    \"lastName\": \"nisi non nulla\",\n    \"description\": \"in Lorem cillum consequat\",\n    \"address\": \"consequat Ut ipsum\",\n    \"phone\": \"cillum voluptate dolore\",\n    \"email\": \"deserunt do\"\n  }\n]"
+								},
+								{
+									"id": "444a8b53-cc59-4c06-bc4b-cf82d10f5b6a",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "ed1ac3cc-fdd2-4b29-8976-98060c105455",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update contact",
+							"id": "3611eadb-4277-4794-8f6e-901f1d3eba95",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Access-Token",
+										"value": "eu in eiusmod sit"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -65598004,\n  \"firstName\": \"fugiat ut anim\",\n  \"lastName\": \"dolore ut\",\n  \"description\": \"veniam cupidatat cillum eu ut\",\n  \"address\": \"irure occaecat\",\n  \"phone\": \"minim voluptate adipisicing exercitation\",\n  \"email\": \"ex in Ut \"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/my-contacts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"my-contacts"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "858702c1-2f57-491b-ad9d-0819711da442",
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -65598004,\n  \"firstName\": \"fugiat ut anim\",\n  \"lastName\": \"dolore ut\",\n  \"description\": \"veniam cupidatat cillum eu ut\",\n  \"address\": \"irure occaecat\",\n  \"phone\": \"minim voluptate adipisicing exercitation\",\n  \"email\": \"ex in Ut \"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": -65598004,\n  \"firstName\": \"fugiat ut anim\",\n  \"lastName\": \"dolore ut\",\n  \"description\": \"veniam cupidatat cillum eu ut\",\n  \"address\": \"irure occaecat\",\n  \"phone\": \"minim voluptate adipisicing exercitation\",\n  \"email\": \"ex in Ut \"\n}"
+								},
+								{
+									"id": "d47d9bec-475b-492f-b94f-41ae3e3eeb82",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -65598004,\n  \"firstName\": \"fugiat ut anim\",\n  \"lastName\": \"dolore ut\",\n  \"description\": \"veniam cupidatat cillum eu ut\",\n  \"address\": \"irure occaecat\",\n  \"phone\": \"minim voluptate adipisicing exercitation\",\n  \"email\": \"ex in Ut \"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "f560e758-a94a-4a96-8e24-5e083f9e4344",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -65598004,\n  \"firstName\": \"fugiat ut anim\",\n  \"lastName\": \"dolore ut\",\n  \"description\": \"veniam cupidatat cillum eu ut\",\n  \"address\": \"irure occaecat\",\n  \"phone\": \"minim voluptate adipisicing exercitation\",\n  \"email\": \"ex in Ut \"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Add new contact",
+							"id": "7fbbbe66-3912-4c34-af7c-64c58f836cc5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Access-Token",
+										"value": "eu in eiusmod sit"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Max\",\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is an example of a contact\",\n  \"address\": \"Berlin, 10117, Friedrichstraße 176-179\",\n  \"phone\": \"017677788890\",\n  \"email\": \"max.mustermann@gamil.mock\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/my-contacts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"my-contacts"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "799b0ced-55ae-43b1-93df-3f51753b693f",
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Max\",\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is an example of a contact\",\n  \"address\": \"Berlin, 10117, Friedrichstraße 176-179\",\n  \"phone\": \"017677788890\",\n  \"email\": \"max.mustermann@gamil.mock\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": -65598004,\n  \"firstName\": \"fugiat ut anim\",\n  \"lastName\": \"dolore ut\",\n  \"description\": \"veniam cupidatat cillum eu ut\",\n  \"address\": \"irure occaecat\",\n  \"phone\": \"minim voluptate adipisicing exercitation\",\n  \"email\": \"ex in Ut \"\n}"
+								},
+								{
+									"id": "a50ea2dd-76a3-4926-9327-83214a08c1eb",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Max\",\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is an example of a contact\",\n  \"address\": \"Berlin, 10117, Friedrichstraße 176-179\",\n  \"phone\": \"017677788890\",\n  \"email\": \"max.mustermann@gamil.mock\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "75680a91-09af-44ac-9970-89e8012f8647",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Max\",\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is an example of a contact\",\n  \"address\": \"Berlin, 10117, Friedrichstraße 176-179\",\n  \"phone\": \"017677788890\",\n  \"email\": \"max.mustermann@gamil.mock\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete all contact by authenticated user",
+							"id": "10550f25-13b7-45bb-8440-d005867da46c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Access-Token",
+										"value": "eu in eiusmod sit"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/my-contacts/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"my-contacts",
+										"all"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "5f965d77-acec-404a-a1f2-25f61c801791",
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts",
+												"all"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "81ebd155-eb89-44a7-8d49-015d80839df6",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts",
+												"all"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "38afc5da-e4e6-4ba9-90c8-c6658235aa08",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											},
+											{
+												"key": "Access-Token",
+												"value": "eu in eiusmod sit"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/my-contacts/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"my-contacts",
+												"all"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "04b77779-5587-4b92-9b33-dfd053c8b2b5"
+				},
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "Add new contact",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3d109e13-348d-4b22-bccb-d8d1275d3e4c",
+										"exec": [
+											"var jsonData = pm.response.json();;",
+											"contactId = jsonData.id;",
+											"pm.collectionVariables.set(\"contactId\", contactId);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "2a53938f-9a3a-44f4-a9be-75bda82b83bb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"{{name}}\",\n    \"lastName\": \"{{lastName}}\",\n    \"description\": \"{{description}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/contact",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contact"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "a89fb58a-63da-428b-ac28-70912c77bf8f",
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Max\",\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is an example of a contact\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/contact",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"firstName\": \"Max\",\n  \"id\": 1,\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is example contact\"\n}"
+								},
+								{
+									"id": "435564c1-8f4c-43d0-a2a9-0530d4297fb8",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Max\",\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is an example of a contact\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/contact",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "b43a63cb-0e84-42b9-9cec-2cebb3d9fc8c",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Max\",\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is an example of a contact\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/contact",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get contact by contact id",
+							"id": "b31be5a3-f207-4689-a999-278b66d88880",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/contact/{{contactId}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contact",
+										"{{contactId}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "e27b0b27-ce46-447a-9de6-6bf07f3e2b88",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"firstName\": \"Max\",\n  \"id\": 1,\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is example contact\"\n}"
+								},
+								{
+									"id": "833e39f9-4135-49fa-b933-b2b3a809b10f",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "4c45a37e-6a6b-4256-93a2-a6197d0403b2",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update contact",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "b4b9490a-36b4-4b37-bef8-7696c6231abf",
+										"exec": [
+											"let updateName = pm.variables.replaceIn(\"{{$randomUserName}}\")",
+											"pm.collectionVariables.set(\"updateName\", `${updateName}`)",
+											"",
+											"let updateLastName = pm.variables.replaceIn(\"{{$randomLastName}}\")",
+											"pm.collectionVariables.set(\"updateLastName\", `${updateLastName}`)",
+											"",
+											"let updateDescription = pm.variables.replaceIn(\"{{$randomLoremSentence}}\")",
+											"pm.collectionVariables.set(\"updateDescription\", `${updateDescription}`)"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "ca9596c9-da60-432c-ba00-6e156eb402bb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"{{updateName}}\",\n    \"id\": {{contactId}},\n    \"lastName\": \"{{updateLastName}}\",\n    \"description\": \"{{updateDescription}}\"\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/contact",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contact"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "9a261b3e-a170-4f72-95c0-4f665b03148f",
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Max\",\n  \"id\": 1,\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is example contact\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/contact",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "7a429226-72c0-4b17-a454-88e71eaed960",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Max\",\n  \"id\": 1,\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is example contact\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/contact",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "4e45f079-4634-488e-8cf5-18ca9c9066ea",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Max\",\n  \"id\": 1,\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is example contact\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/contact",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get list of contacts by authenticated user",
+							"id": "b4c43b7a-13d5-4252-9e19-832b70a2145a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/contact",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contact"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "978d869c-706d-4846-a369-cdcd8951080d",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"firstName\": \"Max\",\n    \"id\": 1,\n    \"lastName\": \"Mustermann\",\n    \"description\": \"This is example contact\"\n  },\n  {\n    \"firstName\": \"Max\",\n    \"id\": 1,\n    \"lastName\": \"Mustermann\",\n    \"description\": \"This is example contact\"\n  }\n]"
+								},
+								{
+									"id": "4f46fbf7-df89-483f-b410-46f1f4d92652",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "164d7330-b3dc-412e-b499-ec565674e2e3",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get user profile",
+							"id": "c554b18c-9b3a-4f8c-9ab9-5dae907db9e3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/contact/profile",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contact",
+										"profile"
+									]
+								},
+								"description": "Get the profile of the authorized user"
+							},
+							"response": [
+								{
+									"id": "d806a266-fa4f-4416-9b7d-9e6392aee23e",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												"profile"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"firstName\": \"Max\",\n  \"id\": 1,\n  \"lastName\": \"Mustermann\",\n  \"description\": \"This is example contact\"\n}"
+								},
+								{
+									"id": "b744c2b5-4955-4550-93f4-c2a3c1a75e43",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												"profile"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "4404c6fc-0eef-4a1a-b6f9-51d169d36b78",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												"profile"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Add new email",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "65fd8f18-24e0-417f-a1c5-cac82a408fe0",
+										"exec": [
+											"let email = pm.variables.replaceIn(\"{{$$randomEmail}}\")",
+											"pm.collectionVariables.set(\"email\", `${email}`)"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "3e9431a5-7292-4880-a15f-0ab55c196334",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"valid.email@gamil.mock\",\n  \"contactId\": {{contactId}}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/email",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"email"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "e820dc2c-a674-4001-8f0d-de6461224905",
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"valid.email@gamil.mock\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "ee836879-d1b7-4e01-8ee8-e90077b087d4",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"valid.email@gamil.mock\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "99a6e0a5-095b-4619-82ec-9d7a40f820f3",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"valid.email@gamil.mock\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update email",
+							"id": "b8d48fd9-9373-4bcf-9169-998d93e4ce63",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"valid.email@email.com\",\n  \"id\": 1,\n  \"contactId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/email",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"email"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "40291674-3b7a-43a2-aa1a-28c87dbc2e1b",
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"valid.email@email.com\",\n  \"id\": 1,\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "64bbb27d-4083-4636-9ceb-cefb546a0c9f",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"valid.email@email.com\",\n  \"id\": 1,\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "0ff198fa-bc91-468b-b5a6-8cec092b9796",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"valid.email@email.com\",\n  \"id\": 1,\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get list of emails by contact id",
+							"id": "09d3a06a-a8dd-4de9-976b-b0f3a694dfd6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/email/:contactId/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"email",
+										":contactId",
+										"all"
+									],
+									"variable": [
+										{
+											"key": "contactId",
+											"value": "1",
+											"description": "(Required) contact id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "71e72a8b-1ebb-47f1-8a83-02077d1653b6",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/email/:contactId/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email",
+												":contactId",
+												"all"
+											],
+											"variable": [
+												{
+													"key": "contactId",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"email\": \"valid.email@email.com\",\n    \"id\": 1,\n    \"contactId\": 1\n  },\n  {\n    \"email\": \"valid.email@email.com\",\n    \"id\": 1,\n    \"contactId\": 1\n  }\n]"
+								},
+								{
+									"id": "c0050747-030a-4c11-be77-8fd4e88c60a5",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/email/:contactId/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email",
+												":contactId",
+												"all"
+											],
+											"variable": [
+												{
+													"key": "contactId",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "ab9f32df-ec23-4895-9f42-725e09d5d79c",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/email/:contactId/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email",
+												":contactId",
+												"all"
+											],
+											"variable": [
+												{
+													"key": "contactId",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get email by email id",
+							"id": "f3170196-3a16-4b5e-8d99-084d3cbe9613",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/email/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"email",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) email id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "9ad67f4c-4b9a-47c2-85a8-757ab06e6850",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/email/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) email id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"email\": \"valid.email@email.com\",\n  \"id\": 1,\n  \"contactId\": 1\n}"
+								},
+								{
+									"id": "3eb14c03-1c09-473b-ab9c-f0c31db71f88",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/email/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) email id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "a2e1f3ca-7f22-42f2-9c88-ab46c88a356d",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/email/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) email id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete email by email id",
+							"id": "44427505-9b23-4897-816e-50b10a6ff96b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/email/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"email",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) email id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "333765ae-9071-4556-be73-95df38a21f77",
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/email/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) email id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "9a14e168-2c39-4dbe-a811-a0f962ff6938",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/email/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) email id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "2d3c21bb-670b-4550-8ab9-726f27d837e3",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/email/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"email",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) email id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete contact by contact id",
+							"id": "2e276d60-0158-4959-b0ac-28570a57bce2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/contact/{{contactId}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contact",
+										"{{contactId}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "a3cd9810-b75b-4411-8416-a5be4c5b09f1",
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "83041214-0b63-4fd4-9634-c1751932a8f0",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "d83d678f-e613-4b46-aaec-0e5862612348",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/contact/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contact",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "efc68bd9-f22c-4357-9fb5-7cfa630cb8dd"
+				},
+				{
+					"name": "address",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get address by address id",
+									"id": "45e4c018-6b6d-4ee9-af0b-c441c743860a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Access-Token",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/address/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) address id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "b7a35a60-7e24-47f8-8684-cd01a386e552",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/address/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"address",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) address id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": -95566159,\n  \"city\": \"Berlin\",\n  \"country\": \"Germany\",\n  \"street\": \"Friedrichstraße 176-179\",\n  \"zip\": \"10117\",\n  \"contactId\": 1\n}"
+										},
+										{
+											"id": "27a682e9-10d2-46f8-b395-0e9b85200f2b",
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/address/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"address",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) address id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "080538f3-5b87-4e9f-be30-3c2102adc394",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/address/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"address",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) address id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Delete address by address id",
+									"id": "f41b07e7-7a2c-40f1-8c3d-99a848df0ed2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Access-Token",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/address/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) address id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "ac2a7e5a-fa20-4fd7-a991-bb28c418d54c",
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/address/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"address",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) address id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "1de31a3f-4541-4140-a841-b39559c398dc",
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/address/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"address",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) address id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"id": "56087f5f-5744-44bf-aa9d-a4cd91c745de",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Access-Token",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/address/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"address",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) address id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"id": "db00120c-90b8-4ad8-b4e7-75a66f5900e5"
+						},
+						{
+							"name": "Update address",
+							"id": "0d040d68-ffeb-40b0-a5df-00011f78a861",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -95566159,\n  \"city\": \"Berlin\",\n  \"country\": \"Germany\",\n  \"street\": \"Friedrichstraße 176-179\",\n  \"zip\": \"10117\",\n  \"contactId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/address",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"address"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "004e6337-e4ab-4241-91b9-07825e5ddb4a",
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -95566159,\n  \"city\": \"Berlin\",\n  \"country\": \"Germany\",\n  \"street\": \"Friedrichstraße 176-179\",\n  \"zip\": \"10117\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/address",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "a3c2f453-6e4c-45cd-b549-2aed3647cdf5",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -95566159,\n  \"city\": \"Berlin\",\n  \"country\": \"Germany\",\n  \"street\": \"Friedrichstraße 176-179\",\n  \"zip\": \"10117\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/address",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "fa0446fc-ad3e-4c75-98af-e3c5a4a3b133",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -95566159,\n  \"city\": \"Berlin\",\n  \"country\": \"Germany\",\n  \"street\": \"Friedrichstraße 176-179\",\n  \"zip\": \"10117\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/address",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Add new address",
+							"id": "493d5296-cf79-4541-8df7-6c6805531e9a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"Berlin\",\n  \"country\": \"Germany\",\n  \"street\": \"Friedrichstraße 176-179\",\n  \"zip\": \"10117\",\n  \"contactId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/address",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"address"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "477fb4fc-150f-4896-a857-c7d43f7137e4",
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"Berlin\",\n  \"country\": \"Germany\",\n  \"street\": \"Friedrichstraße 176-179\",\n  \"zip\": \"10117\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/address",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "20d1c3f4-7f63-4db8-b639-f04a796f518e",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"Berlin\",\n  \"country\": \"Germany\",\n  \"street\": \"Friedrichstraße 176-179\",\n  \"zip\": \"10117\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/address",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "fc30576a-a448-4f0f-86c3-1adb6e611db8",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"Berlin\",\n  \"country\": \"Germany\",\n  \"street\": \"Friedrichstraße 176-179\",\n  \"zip\": \"10117\",\n  \"contactId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/address",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get list of addresses by contact id",
+							"id": "43d68aab-ed64-408f-b901-c16da378bd3f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Access-Token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/address/:contactId/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"address",
+										":contactId",
+										"all"
+									],
+									"variable": [
+										{
+											"key": "contactId",
+											"value": "1",
+											"description": "(Required) contact id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "3f2f1e96-cd89-48e1-8f70-fe9a75f9cfd1",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/address/:contactId/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address",
+												":contactId",
+												"all"
+											],
+											"variable": [
+												{
+													"key": "contactId",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": -42533192,\n    \"city\": \"Berlin\",\n    \"country\": \"Germany\",\n    \"street\": \"Friedrichstraße 176-179\",\n    \"zip\": \"10117\",\n    \"contactId\": 1\n  },\n  {\n    \"id\": -47365027,\n    \"city\": \"Berlin\",\n    \"country\": \"Germany\",\n    \"street\": \"Friedrichstraße 176-179\",\n    \"zip\": \"10117\",\n    \"contactId\": 1\n  }\n]"
+								},
+								{
+									"id": "9e975ab1-2965-411b-9c9b-3ecec65c0608",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/address/:contactId/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address",
+												":contactId",
+												"all"
+											],
+											"variable": [
+												{
+													"key": "contactId",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "1e884f30-bc7b-48c6-b80e-def9c78287d1",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Access-Token",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/address/:contactId/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"address",
+												":contactId",
+												"all"
+											],
+											"variable": [
+												{
+													"key": "contactId",
+													"value": "1",
+													"description": "(Required) contact id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "e3d46966-b969-4e20-a619-6d918df29975"
+				}
+			],
+			"id": "f8edc92b-0042-4b3e-b417-2c6ff6b5a07b"
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Access-Token",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "175a7959-b2a9-4d8d-9d4d-aa24f0c1f254",
+				"type": "text/javascript",
+				"exec": [
+					"let name = pm.variables.replaceIn(\"{{$randomUserName}}\")",
+					"pm.collectionVariables.set(\"name\", `${name}`)",
+					"",
+					"let lastName = pm.variables.replaceIn(\"{{$randomLastName}}\")",
+					"pm.collectionVariables.set(\"lastName\", `${lastName}`)",
+					"",
+					"let description = pm.variables.replaceIn(\"{{$randomLoremSentence}}\")",
+					"pm.collectionVariables.set(\"description\", `${description}`)"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "dce29fc9-fe14-4a0c-83b4-f8b6f94b7e46",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7ad5c946-5fd9-40a8-ac90-a301831a3573",
+			"key": "baseUrl",
+			"value": "http://phonebook.telran-edu.de:8080",
+			"type": "string"
+		},
+		{
+			"id": "fa9958e9-8a3d-4d38-8ca6-bccba7e808c6",
+			"key": "name",
+			"value": ""
+		},
+		{
+			"id": "12314896-037e-487b-baab-d5056a4184f0",
+			"key": "lastName",
+			"value": ""
+		},
+		{
+			"id": "ec5024ca-56b4-4abb-a623-85658a90722d",
+			"key": "description",
+			"value": ""
+		},
+		{
+			"id": "4eae430c-2c99-4a12-9a7c-1cb7f85cebf8",
+			"key": "contactId",
+			"value": ""
+		},
+		{
+			"id": "d59670a3-672e-4344-8bc6-285893a21d9d",
+			"key": "updateName",
+			"value": ""
+		},
+		{
+			"id": "2494ff12-1bce-466b-99b1-f20f5148690b",
+			"key": "updateLastName",
+			"value": ""
+		},
+		{
+			"id": "9904b20e-c101-49a5-b00d-a32d253ff188",
+			"key": "updateDescription",
+			"value": ""
+		},
+		{
+			"id": "3a9ca049-ca34-45d5-bf1b-009e70f9dce3",
+			"key": "email",
+			"value": ""
+		}
+	]
+}
